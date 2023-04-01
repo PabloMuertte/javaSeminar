@@ -30,7 +30,6 @@ public class Task {
 
     public static StringBuilder stringCombiner(String newstring) {
         String str = newParsing(newstring);
-        System.out.println(str);
         String[] arr1 = str.split("/");
         StringBuilder combine1 = new StringBuilder();
         combine1 = new StringBuilder(("Студент " + arr1[0] + " получил " + arr1[1] + " по предмету " + arr1[2] + ". \n"));
@@ -42,12 +41,13 @@ public class Task {
         result1.append(combine1);
         result1.append(combine2);
         result1.append(combine3);
+        System.out.println(result1);
         return result1;
     }
 
     public static void stringWrite(String result) {
         StringBuilder str = new StringBuilder(String.valueOf(stringCombiner(result)));
-        try (FileWriter in = new FileWriter("Sim2/test.txt")){
+        try (FileWriter in = new FileWriter("src/Sim2/test.txt")){
             in.append(str);
             System.out.println("Recorded");
         } catch (IOException e) {
