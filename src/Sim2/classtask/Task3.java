@@ -17,7 +17,7 @@ public class Task3 {
 
     public static void stringWrite(String arg) {
         String str = createTESTString(arg);
-        try (FileWriter in = new FileWriter("test.txt")){
+        try (FileWriter in = new FileWriter("Sim2/test.txt")){
             in.append(str);
             System.out.println("Recorded");
         } catch (IOException e) {

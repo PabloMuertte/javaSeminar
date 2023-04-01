@@ -47,7 +47,7 @@ public class Task {
 
     public static void stringWrite(String result) {
         StringBuilder str = new StringBuilder(String.valueOf(stringCombiner(result)));
-        try (FileWriter in = new FileWriter("test.txt")){
+        try (FileWriter in = new FileWriter("Sim2/test.txt")){
             in.append(str);
             System.out.println("Recorded");
         } catch (IOException e) {
