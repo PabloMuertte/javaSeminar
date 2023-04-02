@@ -1,4 +1,4 @@
-package Sim2;
+package Sim2.hometask;
 
 import Sim2.classtask.Task1;
 import Sim2.classtask.Task2;
