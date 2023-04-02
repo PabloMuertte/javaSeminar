@@ -9,7 +9,8 @@ public class main {
 //        System.out.println(Arrays.toString(result));
 //    }
     public static void main(String[] args) {
-
-        Task2.deleteEvenNum();
+//
+//        Task2.deleteEvenNum();
+        Task3.minMidMaxNum();
     }
 }
