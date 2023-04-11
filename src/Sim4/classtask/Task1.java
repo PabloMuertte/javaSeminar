@@ -1,3 +1,4 @@
+package Sim4.classtask;
 //Реализовать консольное приложение, которое:
 // Принимает от пользователя строку вида
 // text:num
@@ -13,7 +14,7 @@ public class Task1 {
 
     private static final String SEPARATOR = ":";
     private static List<String> dataBase = new LinkedList<>();
-    public static void main(String[] args) {
+    public static void main() {
         while (true){
             System.out.print("Введите строку вида text:num ");
             Scanner scanner = new Scanner(System.in);
