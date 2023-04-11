@@ -1,9 +1,7 @@
 package Sim5.homeWork;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 //Написать программу, которая найдёт и выведет повторяющиеся имена с количеством повторений.
 // Отсортировать по убыванию популярности.
@@ -41,18 +39,18 @@ public class hometask2sim5 {
             array.add("Петр Лыков");
             array.add("Иван Ежов");
             System.out.println(array);
-            System.out.println(array.size());
+            count(array);
         }
-
+    }
+    public static void count(List<String> array) {
         Map<String, Integer> result = new HashMap<>();
         Integer count = 1;
         for (String buffer : array) {
             String name = buffer.split(SEPARATOR)[0];
             if (!result.containsKey(name)) {
                 result.put(name, count);
-            }
-            else {
-                if (result.containsKey(name)) ;
+            } else {
+                if (result.containsKey(name))
                 {
                     int newcount = 0;
                     newcount = result.get(name) + 1;
@@ -60,16 +58,16 @@ public class hometask2sim5 {
                 }
             }
         }
-        System.out.println(result);
+        sort(result);
+    }
+
+    public static void sort (Map<String, Integer> result) {
+        Map<String, Integer> sortedMapInDescending = result.entrySet()
+                .stream()
+                .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+                .collect(Collectors.toMap(entry -> entry.getKey(), entry -> entry.getValue(),
+                        (entry1, entry2) -> entry2, LinkedHashMap::new));
+        System.out.println("HashMap before sorting " + result);
+        System.out.println("HashMap after sorting by value " + sortedMapInDescending);
     }
 }
-//        for (int i = 0; i < (array.size()-1); i++) {
-//            String buffer = array.get(i);
-//            String name = buffer.split(SEPARATOR)[0];
-//            if (result.containsKey(name));{
-//                int newcount = 0;
-//                newcount= result.get(name)+1;
-//                result.put(name,newcount);
-//            }
-//            System.out.println(result);
-//        }
