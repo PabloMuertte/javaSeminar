@@ -1,10 +1,8 @@
-package Sim5;
+package Sim5.homeWork;
 
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.*;
 
-public class hometasksim5 {
+public class hometask1sim5 {
     private static final String SEPARATOR = "/";
     private static final Map<String,String> dataBase = new HashMap<>();
     public static void main(String[] args) {
